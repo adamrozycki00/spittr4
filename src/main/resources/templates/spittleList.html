@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spittr</title>
+    <link rel="stylesheet"
+          type="text/css"
+          th:href="@{/static/style.css}"></link>
+</head>
+<body>
+
+<h1>Spittles</h1>
+
+<ul>
+    <li th:each="spittle : ${spittleList}">
+        <div class="spittleMessage"
+             th:text="${spittle.message}">
+        </div>
+        <div>
+            <span class="spittleTime" th:text="${spittle.time}" ></span>
+            <span class="spittleLocation" th:text="${spittle.latitude} + ', ' + ${spittle.longitude}"></span>
+        </div>
+    </li>
+</ul>
+
+</body>
+</html>

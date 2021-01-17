@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spittr</title>
+    <link rel="stylesheet"
+          type="text/css"
+          th:href="@{/static/style.css}"></link>
+</head>
+<body>
+
+<h1>Welcome to Spittr</h1>
+
+<div class="spittleView" th:object="${spittle}">
+    <span class="spittleMessage" th:text="*{message}"></span>
+    <span class="spittleTime" th:text="*{time}"></span>
+</div>
+</body>
+</html>
